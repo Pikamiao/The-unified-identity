@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>武汉科技大学</title>
+    <style>
+
+        body{
+            background: url("img/background2.png") no-repeat;
+            background-size:100%;
+        }
+
+        .background{
+            width: 950px;
+            height: 600px;
+            /* rgba(0, 0, 0, 0.2) 前三个确定颜色(RGB)，最后0.8确定透明度 */
+            background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+            background-color: white;
+            /*让div居中*/
+            margin:auto;
+            vertical-align: middle;
+            /*padding: 15px;//内边距*/
+            /*外边距*/
+            margin-top: 200px;
+        }
+
+        .left{
+            float: left;
+            margin: 50px;
+        }
+
+        /*第一个元素*/
+        .left > p:first-child{
+            color: blueviolet;
+            font-size: 30px;
+        }
+
+        .left > p:last-child{
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        .center{
+            /*整个页面的正中间*/
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 150px);
+            width: 500px;
+            border: 10px;
+        }
+
+        #button1,#button2,#button3{
+            width: 150px;
+            height: 40px;
+            background-color: blueviolet;
+            border: 1px solid blueviolet;
+            color: white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .right{
+            float: right;
+            margin: 50px;
+        }
+
+        .right > p:first-child{
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        .right > p a {
+            color: cornflowerblue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="background">
+    <div class="left">
+        <p>武汉科技大学</p>
+        <p>Wuhan University of Science and Technology</p>
+    </div>
+
+    <div class="center">
+        <input type="button" id="button1" value="武科大图书馆">
+        <input type="button" id="button2" value="武科大教务处">
+        <input type="button" id="button3" value="武科大校园一览">
+    </div>
+
+    <div class="right">
+        <p>未登录<a href="login.html">点击登录</a></p>
+    </div>
+
+</div>
+
+<script>
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+
+    //绑定点击事件
+    button1.onclick = function(){
+        //页面跳转
+        location.href="WUSTlibrary.html";
+        alert("武汉科技大学图书馆欢迎您");
+    }
+
+    //绑定点击事件
+    button2.onclick = function(){
+        //页面跳转
+        location.href="WUSToffice.html";
+        alert("武汉科技大学教务处欢迎您");
+    }
+
+    //绑定点击事件
+    button3.onclick = function(){
+        //页面跳转
+        location.href="WUSTview.html";
+        alert("页面跳转成功");
+    }
+
+</script>
+
+</body>
+</html>

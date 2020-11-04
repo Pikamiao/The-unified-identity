@@ -1,0 +1,27 @@
+
+皮皮雯的温馨提醒：
+
+运行项目之前需注意：
+
+    1.将数据库链接文件\src\web\common\Connector里的数据库用户名和密码设置为自己的数据库的用户名和密码
+
+    2.打开自己电脑里的数据库，否则数据库没有链接，运行会出错
+
+    3.\servlet_tomcat\src\web\common
+      \servlet_tomcat\src\web\pojo
+      \servlet_tomcat\src\web\service
+      \servlet_tomcat\src\web\test          是菲菲写的数据库文件和测试类
+
+    4.\servlet_tomcat\src\web\servlet       是我写的servlet配置，主要是一些界面跳转的逻辑
+      \servlet_tomcat\web\img               是一些html界面里的图片，所以路径最好不要改，不然容易出错
+      \servlet_tomcat\web\WEB-INF           一些jar包，可能并没有什么用处
+      \servlet_tomcat\src\web\filter        过滤器包，实现过滤器功能，我还没搞完，中间涉及一些东西我不会，还在学
+
+简要说明一下项目运行顺序：
+
+    loginWUST.html是第一个界面，还未登录时的界面
+    界面里面三个链接，WUSTlibrary.html，WUSToffice.html，WUSTview.html
+    WUSTlibrary.html，WUSToffice.html需要登录才能访问
+    WUSTview.html不用登陆就可以访问（主要是做个能访问与不能访问的对比）
+
+    WUSTlibrary.html，WUSToffice.html

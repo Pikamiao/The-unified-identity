@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+
+        /*通配符*/
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: url("img/background3.png") no-repeat;
+        }
+
+        .background{
+            width: 900px;
+            height: 800px;
+            /* rgba(0, 0, 0, 0.2) 前三个确定颜色(RGB)，最后0.8确定透明度 */
+            background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+            background-color: white;
+            /*让div居中*/
+            margin: auto;
+            /*padding: 15px;//内边距*/
+            /*外边距*/
+            margin-top: 50px;
+        }
+
+        .left{
+            float: left;
+            margin: 20px;
+        }
+
+        /*第一个元素*/
+        .left > p:first-child{
+            color: green;
+            font-size: 30px;
+        }
+
+        .left > p:last-child{
+            color: darkgreen;
+            font-size: 20px;
+        }
+
+        .center{
+            /*整个页面的正中间*/
+            position: absolute;
+            top: calc(50% - 250px);
+            left: calc(50% - 200px);
+            width: 500px;
+            border: 30px;
+        }
+
+        .c_left{
+            width: 150px;
+            text-align: right;
+            height: 60px;
+            font-size: 23px;
+            /*内边距*/
+            padding-right: 30px;
+            color: green;
+        }
+
+        #username,#password,#passwordCorrect,#email,#name,#birthday{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #A6A6A6;
+            /*设置边框圆角*/
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        .right{
+            float: right;
+            margin: 50px;
+        }
+
+        .right > p:first-child{
+            color: green;
+            font-size: 20px;
+        }
+
+        .right > p a {
+            color: cornflowerblue;
+        }
+
+        #button{
+            width: 150px;
+            height: 40px;
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="background">
+
+    <div class="left">
+        <p>新用户注册</p>
+        <p>New User Registration</p>
+    </div>
+
+    <div class="center">
+        <div class="form">
+            <!--定义表单-->
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <!--这样点击用户名时，也可以选中用户名后面的文本框-->
+                        <td class="c_left"><label for="username">用户名</label></td>
+                        <td class="c_right"><input type="text" name="username" id="username" placeholder="请输入用户名"></td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="password">密码</label></td>
+                        <td class="c_right"><input type="password" name="password" id="password" placeholder="请输入密码"></td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="password">确认密码</label></td>
+                        <td class="c_right"><input type="password" name="passwordCorrect" id="passwordCorrect" placeholder="请确认密码"></td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="email">Email</label></td>
+                        <td class="c_right"><input type="email" name="email" id="email" placeholder="请输入邮箱地址"></td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="name">真实姓名</label></td>
+                        <td class="c_right"><input type="text" name="name" id="name" placeholder="请输入真实姓名"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="c_left"><label>角色：</label></td>
+                        <td class="c_right">
+                            <input type="radio" name="role" value="student"> 学生
+                            <input type="radio" name="role" value="library"> 图书管理员
+                            <input type="radio" name="role" value="office"> 教务管理员
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="birthday">出生日期</label></td>
+                        <td class="c_right"><input type="date" name="birthday" id="birthday"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" id="button" value="注册"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="right">
+        <p>已有帐号<a href="login.html">立即登录</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>

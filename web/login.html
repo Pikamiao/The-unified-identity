@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    <style>
+
+        /*通配符*/
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: url("img/background3.png") no-repeat;
+        }
+
+        .background{
+            width: 900px;
+            height: 550px;
+            /* rgba(0, 0, 0, 0.2) 前三个确定颜色(RGB)，最后0.8确定透明度 */
+            background: rgba(255, 255, 255, 0.8) none repeat scroll !important;
+            background-color: white;
+            /*让div居中*/
+            margin:auto;
+            vertical-align: middle;
+            /*padding: 15px;//内边距*/
+            /*外边距*/
+            margin-top: 200px;
+        }
+
+        .left{
+            float: left;
+            margin: 50px;
+        }
+
+        /*第一个元素*/
+        .left > p:first-child{
+            color: green;
+            font-size: 30px;
+        }
+
+        .left > p:last-child{
+            color: darkgreen;
+            font-size: 20px;
+        }
+
+        .center{
+            /*整个页面的正中间*/
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 150px);
+            width: 400px;
+            border: 30px;
+        }
+
+        .c_left{
+            width: 100px;
+            text-align: right;
+            height: 60px;
+            font-size: 23px;
+            /*内边距*/
+            padding-right: 30px;
+            color: green;
+        }
+
+        #username,#password{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #A6A6A6;
+            /*设置边框圆角*/
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        .right{
+            float: right;
+            margin: 50px;
+        }
+
+        .right > p:first-child{
+            color: green;
+            font-size: 20px;
+        }
+
+        .right > p a {
+            color: cornflowerblue;
+        }
+
+        #button{
+            width: 150px;
+            height: 40px;
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="background">
+
+    <div class="left">
+        <p>用户登录</p>
+        <p>User Login</p>
+    </div>
+
+    <div class="center">
+        <div class="form">
+            <!--定义表单-->
+            <form action="/servlet_tomcat/loginServlet" method="post">
+                <table>
+                    <tr>
+                        <!--这样点击用户名时，也可以选中用户名后面的文本框-->
+                        <td class="c_left"><label for="username">用户名</label></td>
+                        <td class="c_right"><input type="text" name="username" id="username" placeholder="请输入用户名"></td>
+                    </tr>
+                    <tr>
+                        <td class="c_left"><label for="password">密码</label></td>
+                        <td class="c_right"><input type="password" name="password" id="password" placeholder="请输入密码"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center" ><input type="submit" id="button" value="登录"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="right">
+        <p>没有账号<a href="zhuce.html">点击注册</a></p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
